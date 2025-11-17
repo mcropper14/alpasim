@@ -1,0 +1,46 @@
+# Should be used in defaults list, e.g.
+# - /driver: vavam
+
+defaults:
+  - vavam_runtime_configs # Camera and simulation configs
+  - _self_
+
+# VAM Driver Configuration for Alpasim
+# Model configuration
+model:
+  # checkpoint_path: "/mnt/vavam_driver/VAM_width_2048_pretrained_139k.pt" # Path to JIT compiled VQ tokenizer
+  checkpoint_path: "/mnt/vavam_driver/VAM_width_1024_pretrained_139k.pt" # Path to JIT compiled VQ tokenizer
+  # config_path: "${oc.env:VAM_CHECKPOINT_PATH,/mnt/alpackages/vam_driver.tar}" # Path to VAM checkpoint
+  device: "cuda" # Device to run inference on (cuda/cpu)
+  dtype: "float16" # Data type for inference (float16/float32)
+  tokenizer_path: "/mnt/vavam_driver/VQ_ds16_16384_llamagen_encoder.jit"
+
+# Server configuration
+host: "0.0.0.0"
+port: ???
+
+# Inference configuration
+inference:
+  context_length: 1 # Number of temporal frames to use as context
+  image_height: 288 # Expected image height (VAM scales NeuroNCAP frames to 288)
+  image_width: 512 # Expected image width (VAM scales NeuroNCAP frames to 512)
+  use_cameras: ["camera_front_wide_120fov"] # Single front camera for VAM
+  max_batch_size: 32 # Maximum batch size for inference
+
+# Route configuration
+route:
+  default_command: 2  # Default command: 0=right, 1=left, 2=straight
+  use_waypoint_commands: true  # Whether to interpret waypoints as commands
+  command_distance_threshold: 3.0  # Lateral displacement threshold in meters (from VAM)
+  min_lookahead_distance: 10.0  # Minimum distance to look ahead for waypoints in meters
+
+# Output configuration
+output_dir: "/mnt/output/driver"
+
+# Trajectory configuration
+trajectory:
+  prediction_horizon: 6 # Number of future points to predict (@ 2Hz)
+  frequency_hz: 2 # Output frequency in Hz
+
+
+plot_debug_images: false

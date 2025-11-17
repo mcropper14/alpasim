@@ -1,0 +1,17 @@
+# Onboarding
+Alpasim depends on access to the following:
+
+* Hugging Face access
+    * Used for downloading simulation artifacts
+    * Data is [here](https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles-NuRec/tree/main/sample_set/25.07_release )
+    * See info on data [here](https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles-NuRec/blob/main/README.md#dataset-format)
+    for more information on the contents of artifacts used to define scenes
+    * You will need to create a free Hugging Face account if you do not already have one and create
+    an access token with read access. See [access tokens](https://huggingface.co/settings/tokens).
+* A version of `uv` installed (see [here](https://docs.astral.sh/uv/getting-started/installation/))
+* Docker compose installed (see [setup instructions](https://docs.docker.com/compose/install/linux/))
+    * The wizard needs `docker`, `docker-compose-plugin`, and `docker-buildx-plugin`
+* CUDA 12.6 or greater installed (see [here](https://developer.nvidia.com/cuda-downloads) for instructions)
+
+Once you have access to the above, please follow instructions in the [tutorial](/docs/TUTORIAL.md) to
+get started running Alpasim.

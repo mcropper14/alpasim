@@ -1,0 +1,17 @@
+[project]
+name = "alpasim_workspace"
+version = "0.5.0"
+description = "Workspace for Alpamayo Sim development"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+
+[tool.uv.workspace]
+members = ["src/controller",
+        "src/eval",
+        "src/grpc",
+        "src/runtime",
+        "src/utils",
+        "src/physics",
+        "src/tools",
+        "src/driver",
+        ]

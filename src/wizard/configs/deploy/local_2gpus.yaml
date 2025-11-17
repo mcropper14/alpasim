@@ -1,0 +1,32 @@
+# @package _global_
+# Config for running on workstations with a single 40gb+ GPU, see TUTORIAL
+# for extra instructions. In short, use cmd line arg "+deploy=local" with wizard.
+
+defaults:
+  - _self_
+  - /stable_manifest/internal
+
+defines:
+  # The repo-relative resolver makes the path relative to the git repo root.
+  filesystem: ${repo-relative:"data"}
+
+services:
+  driver:
+    replicas: 2
+    gpus: [0, 1]
+
+  sensorsim:
+    replicas: 2
+    gpus: [0, 1]
+
+  physics:
+    replicas: 2
+    gpus: [0, 1]
+
+  trafficsim:
+    replicas: 2
+    gpus: [0, 1]
+
+  controller:
+    replicas: 2
+    gpus: null
