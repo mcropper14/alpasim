@@ -1,0 +1,6 @@
+download .pem key 
+where key is stored used, use chmod 400 [name_pem_key].pem 
+
+inside of VS Code, add device to .ssh config (or on local machine) 
+
+user is ubuntu by default, also need path for .pem key 
