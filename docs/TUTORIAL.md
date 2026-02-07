@@ -38,6 +38,10 @@ Let's start by executing a run with default settings.
    simulation _ `alpasim_wizard +deploy=local wizard.log_dir=$PWD/tutorial` _ This will create a
    `tutorial/` directory with all necessary config files and run the simulation
 
+If errors, try ``` sudo docker compose up ``` after the wizard config. 
+
+
+
 ## Results structure
 
 The simulation logs/output will be in the created `tutorial` directory. For a visualization of the
@@ -193,6 +197,9 @@ First, one may download the model weights from HuggingFace:
 ```bash
 huggingface-cli download nvidia/Alpamayo-R1-10B
 ```
+use this instead inside of python venv: 
+
+```bash hf download nvidia/Alpamayo-R1-10B ```
 
 The wizard will use the `HF_HOME` environment variable to find the system HuggingFace cache
 (`~/.cache/huggingface` by default). If the model weights do not exists locally, the driver service
