@@ -23,7 +23,14 @@ Alpasim depends on access to the following:
 - CUDA 12.6 or greater installed (see [here](https://developer.nvidia.com/cuda-downloads) for
   instructions)
 - Install the NVIDIA Container Toolkit (see
-  [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html))
+  [here](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+
+  Create python venv: ```` python3 -m venv sim ```
+  ``` source sim/bin/activate ```
+``` pip install -U "huggingface_hub[cli]>=0.20" ```
+
+``` hf download nvidia/Alpamayo-R1-10B ``` instead of hugging_face[cli] 
+  
 
 Once you have access to the above, please follow instructions in the [tutorial](/docs/TUTORIAL.md)
 to get started running Alpasim.
