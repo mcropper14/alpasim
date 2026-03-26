@@ -2,6 +2,15 @@
 # Project Notes
 
 To make changes to saving info/model logging go to: ``` src/driver/src/alpasim_driver/main.py ``` 
+
+Look for: ```         self._safety_validator = SafetyValidator()
+                      logger.info("Safety validator enabled")
+                      self._trace_writer = StepTraceWriter(self._cfg.output_dir)
+                      if self._trace_writer.path:
+                          logger.info("Live step trace logging enabled: %s", self._trace_writer.path) ``` 
+
+
+
 To change number of generated trajectories, modify: ```num_traj_samples ``` inside of ``` src/driver/src/alpasim_driver/main.py ```
 
 TODO:
