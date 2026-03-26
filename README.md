@@ -1,8 +1,8 @@
 
-# Project
+# Project Notes
 
-To make changes go to: ``` src/driver/src/alpasim_driver/main.py ``` 
-To change number of generator trajectories, modify: ```num_traj_samples ``` inside of ``` src/driver/src/alpasim_driver/main.py ```
+To make changes to saving info/model logging go to: ``` src/driver/src/alpasim_driver/main.py ``` 
+To change number of generated trajectories, modify: ```num_traj_samples ``` inside of ``` src/driver/src/alpasim_driver/main.py ```
 
 TODO:
 
