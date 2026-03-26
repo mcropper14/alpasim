@@ -11,7 +11,7 @@ Look for: ```         self._safety_validator = SafetyValidator()
 
 
 
-To change number of generated trajectories, modify: ```num_traj_samples ``` inside of ``` src/driver/src/alpasim_driver/main.py ```
+To change number of generated trajectories, modify: ```num_traj_samples ``` inside of ``` src/driver/src/alpasim_driver/ar1_model.py ```
 
 TODO:
 
