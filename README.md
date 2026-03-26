@@ -1,3 +1,15 @@
+
+# Project
+
+To make changes go to: ``` src/driver/src/alpasim_driver/main.py ``` 
+To change number of generator trajectories, modify: ```num_traj_samples ``` inside of ``` src/driver/src/alpasim_driver/main.py ```
+
+TODO:
+
+load in multiple clips for inference, let in run on multiple clips, run inference, store results in json - tracjectory for every second, steering angle, collision 
+
+
+
 # AlpaSim: A modular, lightweight, and data-driven research simulator for autonomous driving
 
 <div align="center">
